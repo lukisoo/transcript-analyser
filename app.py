@@ -6,4 +6,6 @@ def show_transcript():
     return data
 
 if __name__ == "__main__":
-    print(show_transcript())
+    # Print out the transcript with sentiment
+    for entry in show_transcript():
+        print(f"{entry['speaker']}: {entry['text']} -> Sentiment: {entry.get('sentiment', 'N/A')}")
