@@ -27,20 +27,22 @@ This project is a self-contained Python application that loads a conversational 
 
 ## Set up instructions
 
-### 1. Create a virtual environment (optional, but recommended)
+### 1. Clone this GitHub Repository
+
+### 2. Create a virtual environment (optional, but recommended)
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # Or on Windows: venv\Scripts\activate
 ```
 
-### 2. Install dependencies
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the application
+### 4. Run the application
 
 ```bash
 python app.py
