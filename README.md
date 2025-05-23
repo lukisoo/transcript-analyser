@@ -29,12 +29,24 @@ This project is a self-contained Python application that loads a conversational 
 
 ### 1. Clone this GitHub Repository
 
+```bash
+git clone https://github.com/lukisoo/transcript-analyser.git
+cd transcript-analyser
+```
+
 ### 2. Create a virtual environment (optional, but recommended)
 
+```
+On Windows:
 ```bash
 python -m venv venv
-source venv/bin/activate  # Or on Windows: venv\Scripts\activate
+ venv\Scripts\activate
 ```
+
+On Mac (I use Windows - unfortunately I do not have a Mac readily available to test on):
+```bash
+python -m venv venv
+source venv/bin/activate
 
 ### 3. Install dependencies
 
@@ -75,6 +87,8 @@ Speaker A: I was, um, thinking we could grab coffee later?
 Speaker B: Oh, like, totally! That sounds great.
 ...
 ```
+
+While the code does handle some edge cases (e.g. if a speaker has no corresponding dialogue), it does assume that the transcript exists and is formatted in the correct 'Speaker A: ...' pattern.
 
 ---
 
