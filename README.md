@@ -93,7 +93,7 @@ While the code does handle some edge cases (e.g. if a speaker has no correspondi
 
 ---
 
-## 📊 Metrics Computed
+## Metrics Computed
 
 | Metric                             | Description                                                                          |
 | ---------------------------------- | ------------------------------------------------------------------------------------ |
@@ -117,7 +117,7 @@ I additionally chose to display:
 
 ---
 
-## 💡 In one extra hour I would...
+## In one extra hour I would...
 
 ### Functionality
 
