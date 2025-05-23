@@ -119,6 +119,11 @@ I additionally chose to display:
 
 ## In one extra hour I would...
 
+### Code
+
+I would add additional handling for edge cases that assume the `transcript.txt` file may be malformed or missing.
+Some of the code could also be refactored - for example, the logic for creating a bar graph, for simpler and cleaner code.
+
 ### Functionality
 
 Add a **sentiment timeline graph** to visualise how the emotional tone of the conversation shifts over time. This could help highlight key moments of positivity, negativity, or neutrality.
