@@ -26,7 +26,6 @@ def compute_filler_ratio(text, filler_data, speaker):
     if speaker == "A":
         filler_data["a_filler"] += filler_count
         filler_data["a_words"] += word_count
-
     else:
         filler_data["b_filler"] += filler_count
         filler_data["b_words"] += word_count
@@ -34,7 +33,6 @@ def compute_filler_ratio(text, filler_data, speaker):
     filler_data["total_filler"] += filler_count
     filler_data["total_words"] += word_count
 
-    
     return line_filler_ratio, filler_data
 
 def compute_sentiment(text):
@@ -46,25 +44,19 @@ def parse_transcript(path="transcript.txt"):
     with open(path, "r") as f:
         lines = f.readlines()
     data = []
+    # Keep track of per-speaker filler data and running totals for later reporting
     filler_data = {"a_filler": 0, "a_words":0, "b_filler": 0, "b_words":0, "total_filler": 0, "total_words": 0}
     
     # Iterate through each line to split and analyse
     for line in lines:
         if ":" in line:
-            # print("1")
             speaker, text = line.split(":", 1)
             speaker = speaker.strip()[-1]
             text = text.strip()
-            # print("2")
 
-
+			# Compute sentiment and filler ratio
             sentiment = compute_sentiment(text)
-            # print("4")
             line_filler_ratio, filler_data = compute_filler_ratio(text, filler_data, speaker)
-            
-            # print("line", line_filler_ratio)
-            # print(filler_data)
-
 
             data.append({
                 "speaker": speaker,
@@ -74,8 +66,6 @@ def parse_transcript(path="transcript.txt"):
             })
 
     overall_filler_ratio = round(filler_data["total_filler"] / filler_data["total_words"], 3) if filler_data["total_words"] else 0.0
-    # print(data)
-    # print(overall_filler_ratio)
 
     return {
         "transcript": data,
