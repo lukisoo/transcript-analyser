@@ -36,7 +36,7 @@ cd transcript-analyser
 
 ### 2. Create a virtual environment (optional, but recommended)
 
-```
+
 On Windows:
 ```bash
 python -m venv venv
@@ -47,6 +47,7 @@ On Mac (I use Windows - unfortunately I do not have a Mac readily available to t
 ```bash
 python -m venv venv
 source venv/bin/activate
+```
 
 ### 3. Install dependencies
 
