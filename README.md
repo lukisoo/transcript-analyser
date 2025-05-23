@@ -60,7 +60,7 @@ Click on the 'Load or Refresh Analysis' button to generate the summary and chart
 
 ## Transcript Format
 
-Your `transcript.txt` should:
+The `transcript.txt` should have the following format:
 
 - Contain **12–16 lines** of dialogue
 - Alternate between **Speaker A** and **Speaker B**
